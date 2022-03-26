@@ -30,7 +30,8 @@ exports.onRenderBody = function (_ref) {
 		return;
 	}
 
-	var components = [_react2.default.createElement('script', { key: 'snipcartJs', src: options.js, id: 'snipcart', 'data-api-key': options.apiKey, 'data-autopop': options.autopop })];
+	
+	var components = [_react2.default.createElement('script', { key: 'snipcartJs', id: 'snipcart', 'data-api-key': options.apiKey, 'data-autopop': options.autopop, ...options.custom, src: options.js })];
 	if (options.jquery) {
 		components.unshift(_react2.default.createElement('script', { key: 'snipcartJquery', src: options.jquery }));
 	}
